@@ -1,0 +1,17 @@
+@import '../../lib/selection'
+
+selection(#333)
+
+.selection1
+  selection: #333
+
+.selection2
+  selection: #ffc0cb
+
+.selection3
+  selection: #000, #eee
+
+.selection4
+  +selection()
+    border: solid 2px #111
+    color: #f00

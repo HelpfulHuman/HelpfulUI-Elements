@@ -1,0 +1,40 @@
+::-webkit-input-placeholder {
+  color: #ff0;
+}
+:-moz-placeholder {
+  color: #ff0;
+}
+::-moz-placeholder {
+  color: #ff0;
+}
+:-ms-input-placeholder {
+  color: #ff0;
+}
+input.placeholder1::-webkit-input-placeholder {
+  color: #f00;
+}
+input.placeholder1:-moz-placeholder {
+  color: #f00;
+}
+input.placeholder1::-moz-placeholder {
+  color: #f00;
+}
+input.placeholder1:-ms-input-placeholder {
+  color: #f00;
+}
+input.placeholder2::-webkit-input-placeholder {
+  color: #0f0;
+  font-size: 10px;
+}
+input.placeholder2:-moz-placeholder {
+  color: #0f0;
+  font-size: 10px;
+}
+input.placeholder2::-moz-placeholder {
+  color: #0f0;
+  font-size: 10px;
+}
+input.placeholder2:-ms-input-placeholder {
+  color: #0f0;
+  font-size: 10px;
+}

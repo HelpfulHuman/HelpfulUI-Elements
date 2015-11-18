@@ -1,0 +1,40 @@
+::-moz-selection {
+  background: #333;
+  color: #fff;
+}
+::selection {
+  background: #333;
+  color: #fff;
+}
+.selection1::-moz-selection {
+  background: #333;
+  color: #fff;
+}
+.selection1::selection {
+  background: #333;
+  color: #fff;
+}
+.selection2::-moz-selection {
+  background: #ffc0cb;
+  color: #37000a;
+}
+.selection2::selection {
+  background: #ffc0cb;
+  color: #37000a;
+}
+.selection3::-moz-selection {
+  background: #000;
+  color: #eee;
+}
+.selection3::selection {
+  background: #000;
+  color: #eee;
+}
+.selection4::-moz-selection {
+  border: solid 2px #111;
+  color: #f00;
+}
+.selection4::selection {
+  border: solid 2px #111;
+  color: #f00;
+}

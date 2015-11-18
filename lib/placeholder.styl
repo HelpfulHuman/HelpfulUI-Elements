@@ -1,0 +1,27 @@
+/**
+ * Adds the classes for styling input placeholders.
+ *
+ * Usages:
+ *
+ * placeholder( color )
+ *
+ * input
+ *   placeholder( color )
+ *
+ * input
+ *   +placeholder()
+ *     color: #ccc
+ */
+placeholder()
+  if block is a 'ident'
+    block =
+      color: arguments[0] or #ddd
+
+  &::-webkit-input-placeholder
+    {block}
+  &:-moz-placeholder
+    {block}
+  &::-moz-placeholder
+    {block}
+  &:-ms-input-placeholder
+    {block}

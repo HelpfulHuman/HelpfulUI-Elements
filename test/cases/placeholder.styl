@@ -1,0 +1,11 @@
+@import '../../lib/placeholder'
+
+placeholder(#ff0)
+
+input.placeholder1
+  placeholder: #f00
+
+input.placeholder2
+  +placeholder()
+    color: #0f0
+    font-size: 10px

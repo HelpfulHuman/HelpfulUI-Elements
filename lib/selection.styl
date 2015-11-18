@@ -1,0 +1,27 @@
+/**
+ * Adds the selector classes for styling user selection text.
+ *
+ * Usages:
+ *
+ * selection( background )
+ * selection( background, color )
+ *
+ * .some-class
+ *   selection( background [, color] )
+ *
+ * .some-class
+ *   +selection()
+ *     border: solid 2px #111
+ *     color: #777
+ */
+selection()
+  if block is a 'ident'
+    $fallbackColor = dark(arguments[0]) ? #fff : darken(arguments[0], lightness(arguments[0]))
+    block =
+      background: arguments[0]
+      color: arguments[1] or $fallbackColor
+
+  &::-moz-selection
+    {block}
+  &::selection
+    {block}
