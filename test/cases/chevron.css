@@ -1,0 +1,56 @@
+.chevron1 {
+  display: block;
+  width: 1em;
+  height: 1em;
+  background: transparent;
+  border-style: solid;
+  border-color: #333;
+  border-width: 0 2px 2px 0;
+  transform: rotate(-45deg);
+}
+.chevron2 {
+  display: block;
+  width: 1em;
+  height: 1em;
+  background: transparent;
+  border-style: solid;
+  border-color: #333;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.chevron3 {
+  color: #f00;
+  display: block;
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  border-style: solid;
+  border-color: #f00;
+  border-width: 0 2px 2px 0;
+  transform: rotate(135deg);
+}
+.chevron4 {
+  color: #0f0;
+}
+.chevron4:after {
+  display: block;
+  width: 2em;
+  height: 2em;
+  background: transparent;
+  border-style: solid;
+  border-color: #0f0;
+  border-width: 0 2px 2px 0;
+  transform: rotate(-135deg);
+  content: '';
+}
+.chevron5 {
+  color: #222;
+  display: block;
+  width: 20%;
+  height: 20%;
+  background: transparent;
+  border-style: solid;
+  border-color: #00f;
+  border-width: 0 4px 4px 0;
+  transform: rotate(-45deg);
+}

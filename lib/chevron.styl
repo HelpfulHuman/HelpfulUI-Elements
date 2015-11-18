@@ -1,0 +1,27 @@
+/**
+ * Creates a chevron out of pure CSS.  You can style the direction, size,
+ * color and line width.  Set to "right" by default.
+ *
+ * @param  {String} $dir
+ * @param  {Number} $size
+ * @param  {Color}  $color
+ * @param  {Number} $line-size
+ */
+chevron($dir = down, $size = 1em, $color = false, $line-size = 2px)
+  $dir   = unquote($dir)
+  $color = @color or #333 unless $color is a 'color'
+  display: block
+  width: $size
+  height: $size
+  background: transparent
+  border-style: solid
+  border-color: $color
+  border-width: 0 $line-size $line-size 0
+  if $dir is right
+    transform: rotate(45deg)
+  else if $dir is up
+    transform: rotate(135deg)
+  else if $dir is left
+    transform: rotate(-135deg)
+  else
+    transform: rotate(-45deg)
