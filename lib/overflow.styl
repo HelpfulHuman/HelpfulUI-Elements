@@ -1,0 +1,16 @@
+/**
+ * Allows for text-overflow properties like "ellipsis" to be used
+ * more easily.
+ *
+ * ellipsis: Causes cut-off text to be display "..."  rather than clipping
+ * the text to the border.
+ *
+ * [string]: Uses the custom string rather than clipping the text to border.
+ */
+overflow()
+  if arguments[0] in (ellipsis) or arguments[0] is a 'string'
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: arguments
+  else
+    overflow: arguments

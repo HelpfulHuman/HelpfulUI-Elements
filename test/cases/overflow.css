@@ -1,0 +1,11 @@
+.overflow1 {
+  overflow: hidden;
+}
+.overflow2 {
+  overflow: auto;
+}
+.overflow3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
