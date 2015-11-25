@@ -1,0 +1,17 @@
+/**
+ * Takes a hash, filters out any falsey values or "omitted" keys
+ * and then returns the result.
+ *
+ * @param  {Object} $rules
+ * @param  {Array}  $omit
+ */
+expand($rules, $omit = ())
+  $filtered = {}
+  for $k,$rule in $rules
+    unless $k in $omit
+      $rule = expand($rule) if $rule is a 'object'
+      unless !$rule and typeof($rule) in ('null' 'boolean')
+        $filtered[$k] = $rule
+  if mixin is false
+    return $filtered
+  {$filtered}

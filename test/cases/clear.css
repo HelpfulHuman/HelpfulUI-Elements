@@ -1,0 +1,24 @@
+.clear1:before,
+.clear1:after {
+  content: " ";
+  display: table;
+}
+.clear1:after {
+  clear: both;
+}
+.clear2:before,
+.clear2:after {
+  content: " ";
+  display: table;
+}
+.clear2:after {
+  clear: both;
+}
+.clear3:before,
+.clear3:after {
+  content: " ";
+  display: table;
+}
+.clear3:after {
+  clear: both;
+}

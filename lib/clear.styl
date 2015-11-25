@@ -1,0 +1,20 @@
+/**
+ * Adds the before and after selectors needed for the clearfix hack.
+ */
+clearfix()
+  &:before,
+  &:after
+    content: " "
+    display: table
+
+  &:after
+    clear: both
+
+/**
+ * Replaces "clear: children" with a clearfix.
+ */
+clear()
+  if unquote(arguments[0]) is children
+    clearfix()
+  else
+    clear: arguments

@@ -1,0 +1,15 @@
+.expand {
+  one: 100px;
+  three: none;
+  four: solid 1px #000;
+  five: #000;
+  replaceme: 'replaced';
+}
+.expand bar {
+  one: working;
+  three: a b c d;
+}
+.expand:hover {
+  color: #f00;
+  content: '';
+}

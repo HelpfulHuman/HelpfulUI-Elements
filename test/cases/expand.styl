@@ -1,0 +1,36 @@
+@import 'helpful-ui/expand'
+
+replaceme()
+  replaceme 'replaced'
+
+$a = {
+  b: {
+    c: {
+      one: 100px
+      two: false
+      three: none
+      four: solid 1px #000
+      five: #000
+      six: null
+      replaceme: 'not-replaced'
+      bar: {
+        one: working
+        two: false
+        three: a b c d
+      }
+      baz: {
+        dont: 'show me'
+      },
+      bah: {
+        dont: 'show me either'
+      }
+      '&:hover': {
+        color: #f00
+        content: ''
+      }
+    }
+  }
+}
+
+.expand
+  expand: $a.b.c (baz bah)

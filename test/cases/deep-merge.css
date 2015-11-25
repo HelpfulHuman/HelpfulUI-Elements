@@ -1,0 +1,11 @@
+.deep-merge {
+  foo: true;
+}
+.deep-merge bar {
+  baz: #eee;
+  bah: solid 1px #f00;
+}
+.deep-merge bar bak {
+  bag: false;
+  ban: 40em;
+}

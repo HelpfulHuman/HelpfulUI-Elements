@@ -1,0 +1,42 @@
+.units-em1 {
+  font-size: 1em;
+}
+.units-em2 {
+  font-size: 2em;
+}
+.units-em3 {
+  font-size: 1em;
+}
+.units-em4 {
+  font-size: 1.25em;
+}
+.units-em5 {
+  font-size: 0.5em;
+}
+.units-rem1 {
+  font-size: 1rem;
+}
+.units-rem2 {
+  font-size: 2rem;
+}
+.units-rem3 {
+  font-size: 1rem;
+}
+.units-rem4 {
+  font-size: 1.25rem;
+}
+.units-rem5 {
+  font-size: 0.5rem;
+}
+.units-px1 {
+  font-size: 50px;
+}
+.units-px2 {
+  font-size: 32px;
+}
+.units-px3 {
+  font-size: 60px;
+}
+.units-strip-zeros {
+  border: solid 0 #f00 3px;
+}

@@ -1,0 +1,11 @@
+deepMerge()
+  $out = {}
+  for $arg in arguments
+    continue unless $arg is a 'object'
+    for $k, $v in $arg
+      if ($out[$k] is a 'object')
+        $out[$k] = deepMerge($out[$k], $v)
+      else
+        $out[$k] = $v
+
+  return $out
