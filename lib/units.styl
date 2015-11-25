@@ -1,4 +1,4 @@
-@require 'config'
+$hui ?= { base-font-size: 16px }
 
 /**
  * Converts px, rem and % values to "em".  Optionally takes a second
@@ -7,7 +7,7 @@
  * @param  {Number} $amount
  * @param  {Number} $base
  */
-em($amount, $base = $hui.base.font-size)
+em($amount, $base = $hui.base-font-size)
   if $amount is a 'unit'
     if unit($amount) is 'px'
       $amount = unit($amount / $base, 'em')
@@ -24,7 +24,7 @@ em($amount, $base = $hui.base.font-size)
  * @param  {Number} $amount
  * @param  {Number} $base
  */
-rem($amount, $base = $hui.base.font-size)
+rem($amount, $base = $hui.base-font-size)
   if $amount is a 'unit'
     if unit($amount) is 'px'
       $amount = unit($amount / $base, 'rem')
@@ -41,7 +41,7 @@ rem($amount, $base = $hui.base.font-size)
  * @param  {Number} $amount
  * @param  {Number} $base
  */
-percent($amount, $base = $hui.base.font-size)
+percent($amount, $base = $hui.base-font-size)
   if $amount is a 'unit'
     if unit($amount) is 'px'
       $amount = unit(($amount / $base) * 100, '%')
@@ -56,7 +56,7 @@ percent($amount, $base = $hui.base.font-size)
  * @param  {Number} $amount
  * @param  {Number} $base
  */
-px($amount, $base = $hui.base.font-size)
+px($amount, $base = $hui.base-font-size)
   if $amount is a 'unit'
     if unit($amount) is 'em' or unit($amount) is 'rem'
       $amount = unit($amount * $base, 'px')
