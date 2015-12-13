@@ -1,0 +1,77 @@
+$hui ?= { base-font-size: 16px }
+
+/**
+ * Converts px, rem and % values to "em".  Optionally takes a second
+ * argument to perform relative unit calculations.
+ *
+ * @param  {Number} $amount
+ * @param  {Number} $base
+ */
+em($amount, $base = $hui.base-font-size)
+  if $amount is a 'unit'
+    if unit($amount) is 'px'
+      $amount = unit($amount / $base, 'em')
+    else if unit($amount) is 'rem'
+      $amount = unit($amount / $base, 'em')
+    else if unit($amount) is '%'
+      $amount = unit($amount / 100, 'em')
+  return $amount
+
+/**
+ * Converts px, em and % values to "rem".  Optionally takes a second
+ * argument to perform relative unit calculations.
+ *
+ * @param  {Number} $amount
+ * @param  {Number} $base
+ */
+rem($amount, $base = $hui.base-font-size)
+  if $amount is a 'unit'
+    if unit($amount) is 'px'
+      $amount = unit($amount / $base, 'rem')
+    else if unit($amount) is 'em'
+      $amount = unit($amount / $base, 'rem')
+    else if unit($amount) is '%'
+      $amount = unit($amount / 100, 'rem')
+  return $amount
+
+/**
+ * Converts px, em and rem values to "%".  Optionally takes a second
+ * argument to perform relative unit calculations.
+ *
+ * @param  {Number} $amount
+ * @param  {Number} $base
+ */
+percent($amount, $base = $hui.base-font-size)
+  if $amount is a 'unit'
+    if unit($amount) is 'px'
+      $amount = unit(($amount / $base) * 100, '%')
+    else if unit($amount) is 'em' and unit($amount) is 'rem'
+      $amount = unit($amount * 100, '%')
+  return $amount
+
+/**
+ * Converts em, rem and % values to "px".  Provide a second argument to
+ * convert it to the proper value based on the related font size.
+ *
+ * @param  {Number} $amount
+ * @param  {Number} $base
+ */
+px($amount, $base = $hui.base-font-size)
+  if $amount is a 'unit'
+    if unit($amount) is 'em' or unit($amount) is 'rem'
+      $amount = unit($amount * $base, 'px')
+    else if unit($amount) is '%'
+      $amount = unit(($amount / 100) * $base, 'px')
+  return $amount
+
+/**
+ * Strips the unit off of 0 values.
+ *
+ * @return {Array}
+ */
+strip-zeros()
+  $outList = ()
+  for $a in arguments
+    $a = 0 if $a is a 'unit' and remove-unit($a) is 0
+    push($outList, $a)
+  return $outList

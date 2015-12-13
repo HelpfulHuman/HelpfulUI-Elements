@@ -1,0 +1,4 @@
+columns($columns = 12)
+  for $i in (1..$columns)
+    &{$i}
+      width: unit(($i / $columns) * 100, '%')
