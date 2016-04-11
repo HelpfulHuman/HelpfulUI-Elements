@@ -19,9 +19,9 @@ chevron($dir = down, $size = 1em, $color = false, $line-size = 2px)
   border-width: 0 $line-size $line-size 0
   if $dir is right
     transform: rotate(45deg)
-  else if $dir is up
-    transform: rotate(135deg)
   else if $dir is left
+    transform: rotate(135deg)
+  else if $dir is up
     transform: rotate(-135deg)
   else
     transform: rotate(-45deg)

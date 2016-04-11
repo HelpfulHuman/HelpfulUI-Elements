@@ -1,6 +1,6 @@
 {
   "name": "helpful-ui-elements",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Additional utilities built for Helpful UI",
   "main": "./helpful-ui-elements.js",
   "dependencies": {
