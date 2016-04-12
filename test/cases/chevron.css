@@ -27,7 +27,7 @@
   border-style: solid;
   border-color: #f00;
   border-width: 0 2px 2px 0;
-  transform: rotate(135deg);
+  transform: rotate(-135deg);
 }
 .chevron4 {
   color: #0f0;
@@ -40,7 +40,7 @@
   border-style: solid;
   border-color: #0f0;
   border-width: 0 2px 2px 0;
-  transform: rotate(-135deg);
+  transform: rotate(135deg);
   content: '';
 }
 .chevron5 {
