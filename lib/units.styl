@@ -1,5 +1,23 @@
 $hui ?= { base-font-size: 16px }
 
+rem-calc( values )
+  $base = $hui.base-font-size is a "unit" ? $hui.base-font-size : 16
+  $result = null
+  for value in values
+  	if type( value ) == "unit" && ( unit( value ) == "px" || unit( value ) == "" )
+  		value = unit( round( value / $base, 3 ), "rem" )
+  		if value == "0rem" { value = 0 }
+    $result = $result != null ? $result value : value
+
+em-calc( values )
+  $base = $hui.base-font-size
+  $result = null
+  for value in values
+    if type( value ) == "unit" && ( unit( value ) == "px" || unit( value ) == "" )
+      value = unit(round(value / $base, 3 ), "em")
+      if value == "0em" { value = 0 }
+      $result = $result != null ? $result value : value
+
 /**
  * Converts px, rem and % values to "em".  Optionally takes a second
  * argument to perform relative unit calculations.
